@@ -7,12 +7,14 @@
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body class="bg-gray-100">
-<div class="container mx-auto">
-{{-- Without components --}}
-    <x-blank-page componentsJson='[]' />
+<div class="flex">
+    <!-- Side Drawer -->
+    <x-side-drawer />
 
-    {{-- With components --}}
-{{--    <x-blank-page componentsJson='[{"type":"Header","content":"This is a header"}, {"type":"Paragraph","content":"This is a paragraph"}]' />--}}
+    <!-- Main Content Area -->
+    <div class="flex-1 ml-12">
+        <x-blank-page componentsJson="[]" />
+    </div>
 </div>
 </body>
 </html>
