@@ -6,10 +6,13 @@
     <title>Document X</title>
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
-<body>
+<body class="bg-gray-100">
+<div class="container mx-auto">
+{{-- Without components --}}
+    <x-blank-page componentsJson='[]' />
 
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+    {{-- With components --}}
+{{--    <x-blank-page componentsJson='[{"type":"Header","content":"This is a header"}, {"type":"Paragraph","content":"This is a paragraph"}]' />--}}
+</div>
 </body>
 </html>
